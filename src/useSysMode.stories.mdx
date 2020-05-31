@@ -1,0 +1,43 @@
+import { useEffect, useReducer } from 'react'
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+import { useSysMode } from '.'
+
+<Meta title="useSysMode" component={useSysMode}/>
+
+# useSysMode
+
+A hook retrieving system modes.
+
+## Dark
+
+Obtains dark/light mode from system. Captures changes.
+
+Windows 10:
+
+`Settings > Personalization > Colors > Choose your color`
+
+Gnome 3:
+
+`Tweak > Theme`
+
+## Basic
+
+<Preview>
+  <Story name="Basic">
+    {
+      () => {
+        const { dark } = useSysMode()
+        return (
+          <div>
+            {dark ? 'dark' : 'light'}
+          </div>
+        )
+      }
+    }
+  </Story>
+</Preview>
+
+## API
+
+<Props of={useSysMode}/>
