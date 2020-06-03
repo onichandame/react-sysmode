@@ -57,7 +57,5 @@
     "tslib": "^2.0.0",
     "typescript": "^3.9.3"
   },
-  "dependencies": {
-    "yup": "^0.29.1"
-  }
+  "dependencies": {}
 }
